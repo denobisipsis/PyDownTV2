@@ -115,6 +115,9 @@ class AragonTV(Canal.Canal):
                 
             if name: name = Utiles.formatearNombre(name)
             rtmpd_cmd = "rtmpdump -r "+url+" -o "+name
+            
+            # se obtiene un enlace MP4 al coger el url sin mp4: y ponerle como server 
+            # http://alacarta.aragontelevision.es/_archivos/videos
         except:
             raise Error.GeneralPyspainTVsError(u"Error al recuperar el vídeo de Aragon TV")
     
